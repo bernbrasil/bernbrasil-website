@@ -5,14 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hey, I'm Bernardo</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- Primary Meta Tags -->
+    <title>Bernardo Brasil – Personal website</title>
+    <meta name="title" content="Bernardo Brasil – Personal website">
+    <meta name="description"
+        content="Hey, I'm Bernardo Brasil, product person based on Alagoas, Brazil, and this is my personal website.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Bernardo Brasil – Personal website">
+    <meta property="og:description"
+        content="Hey, I'm Bernardo Brasil, product person based on Alagoas, Brazil, and this is my personal website.">
+    <meta property="og:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Bernardo Brasil – Personal website">
+    <meta property="twitter:description"
+        content="Hey, I'm Bernardo Brasil, product person based on Alagoas, Brazil, and this is my personal website.">
+    <meta property="twitter:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+
     <link rel="shortcut icon" href="assets/bern-drawing.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -42,15 +65,13 @@
                 <img src="./assets/bern-drawing.png" alt="Drawing of a white man with galsses and long hair."
                     class="h-32 md:h-20 rounded-full border-4 border-slate-300 dark:border-slate-700">
                 <h1 class="text-md md:text-xl 2xl:text-3xl text-slate-400">
-                    Hey, I'm Bernardo Brasil.
-                    <abbr title="Product manager, designer and ocasionally engineer">Product person</abbr> based on
+                    Hey, I'm Bernardo Brasil. Product person based on
                     <a href="https://www.google.com.br/maps/place/Alagoas" target="_blank"
-                        class="text-blue-500 hover:text-blue-700 ">
-                        <span class="relative inline-flex w-[1em] h-[1em]">
+                        class="text-blue-500 hover:text-blue-700">
+                        <span class="relative inline-flex w-[1em] h-[1em] items-center justify-center">
+                            📍
                             <span
                                 class="motion-safe:animate-ping-slow delay-700 absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-30"></span>
-
-                            📍
                         </span> Alagoas, Brazil.
                     </a>
                 </h1>
@@ -69,22 +90,15 @@
             class="absolute bottom-10 rounded-xl p-1 text-slate-500 bg-slate-100 dark:bg-slate-800  border-2 border-slate-200/50 dark:border-slate-700/50">
             <ul class="flex">
                 <li
-                    class="px-4 py-2 rounded-xl motion-safe:transition-all hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 ">
-                    <a href="mailto:bernbrasil@gmail.com" class="flex flex-col items-center">
+                    class="rounded-none hover:rounded-xl motion-safe:transition-all hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 ">
+                    <a href="mailto:bernbrasil@gmail.com" class="px-4 py-2 flex flex-col items-center">
                         <div>📣</div>
                         Contact
                     </a>
                 </li>
                 <li
-                    class="px-4 py-2 rounded-xl motion-safe:transition-all hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 ">
-                    <button class="flex flex-col items-center">
-                        <div class="small">🇺🇸</div>
-                        Language
-                    </button>
-                </li>
-                <li
-                    class="px-4 py-2 rounded-xl motion-safe:transition-all hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 ">
-                    <button id="showColophon" class="flex flex-col items-center">
+                    class="rounded-none hover:rounded-xl motion-safe:transition-all hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 ">
+                    <button id="showColophon" class="px-4 py-2 flex flex-col items-center">
                         <div>🤓</div>
                         Colophon
                     </button>
@@ -93,18 +107,48 @@
         </nav>
     </div>
     <dialog id="colophonDialog"
-        class="w-6/12 backdrop:bg-slate-900/25 bg-white dark:bg-slate-800 text-slate-900 rounded-lg dark:text-white bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/50 dark:border-slate-700/50">
-        <article class="flex flex-col gap-5">
-            <div class="flex">
-                <h3 class="text-2xl grow">
+        class="md:w-6/12 p-5 backdrop:bg-slate-900/50 bg-white dark:bg-slate-800 text-slate-900 rounded-lg dark:text-white bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/50 dark:border-slate-700/50">
+        <article
+            class="prose prose-sm md:prose-base dark:prose-invert prose-a:text-blue-500 hover:prose-a:text-blue-700 prose-a:no-underline">
+            <div class="flex items-start">
+                <h1 class="grow">
                     <span class="px-1 rounded-lg bg-slate-100 dark:bg-slate-700">🤓</span> Colophon
-                </h3>
+                </h1>
                 <button id="closeColophon" class="text-slate-500/50 hover:text-slate-500">Close</button>
             </div>
-            <p>
-                Technologies:
-                - Tailwind CSS
-            </p>
+            <p class="lead">This is my personal website providing useful links for my work in other plataforms.</p>
+            <h2 id="tools-and-resources">Tools and resources</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:left">Item</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:left"><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
+                        </td>
+                        <td style="text-align:left">Styles</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left"><a href="https://pages.github.com/" target="_blank">Github Pages</a>
+                        </td>
+                        <td style="text-align:left">Deployment</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left"><a href="https://fonts.google.com/specimen/DM+Sans"
+                                target="_blank">DM Sans
+                                Typeface</a></td>
+                        <td style="text-align:left">Google fonts provided sans typeface designed by Johny Pinhorn</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left"><a href="https://plausible.io/" target="_blank">Plausible</a></td>
+                        <td style="text-align:left">Page analytics, public at analytcis.bernbrasil.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </article>
     </dialog>
     <script>
