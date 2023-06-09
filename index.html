@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -107,18 +107,48 @@
         </nav>
     </div>
     <dialog id="colophonDialog"
-        class="w-6/12 backdrop:bg-slate-900/25 bg-white dark:bg-slate-800 text-slate-900 rounded-lg dark:text-white bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/50 dark:border-slate-700/50">
-        <article class="flex flex-col gap-5">
-            <div class="flex">
-                <h3 class="text-2xl grow">
+        class="md:w-6/12 p-5 backdrop:bg-slate-900/50 bg-white dark:bg-slate-800 text-slate-900 rounded-lg dark:text-white bg-slate-100 dark:bg-slate-800 border-2 border-slate-200/50 dark:border-slate-700/50">
+        <article
+            class="prose prose-sm md:prose-base dark:prose-invert prose-a:text-blue-500 hover:prose-a:text-blue-700 prose-a:no-underline">
+            <div class="flex items-start">
+                <h1 class="grow">
                     <span class="px-1 rounded-lg bg-slate-100 dark:bg-slate-700">🤓</span> Colophon
-                </h3>
+                </h1>
                 <button id="closeColophon" class="text-slate-500/50 hover:text-slate-500">Close</button>
             </div>
-            <p>
-                Technologies:
-                - Tailwind CSS
-            </p>
+            <p class="lead">This is my personal website providing useful links for my work in other plataforms.</p>
+            <h2 id="tools-and-resources">Tools and resources</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:left">Item</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:left"><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
+                        </td>
+                        <td style="text-align:left">Styles</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left"><a href="https://pages.github.com/" target="_blank">Github Pages</a>
+                        </td>
+                        <td style="text-align:left">Deployment</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left"><a href="https://fonts.google.com/specimen/DM+Sans"
+                                target="_blank">DM Sans
+                                Typeface</a></td>
+                        <td style="text-align:left">Google fonts provided sans typeface designed by Johny Pinhorn</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left"><a href="https://plausible.io/" target="_blank">Plausible</a></td>
+                        <td style="text-align:left">Page analytics, public at analytcis.bernbrasil.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </article>
     </dialog>
     <script>
